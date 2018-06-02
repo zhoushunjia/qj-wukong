@@ -1,0 +1,47 @@
+/**
+ * Created by Me on 2017/9/29.
+ */
+$(function(){
+    //导航渐变
+    $(window).scroll(function() {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop < 400) {
+            $('body>.header').css({'background-color': 'rgba(0, 134, 205,' + (scrollTop / 400) + ')'});
+        }else{
+            $('body>.header').css({'background-color': '#0086cd'});
+        }
+    });
+    $(window).scroll();
+
+    //导航光标效果
+    var li = $('.header .nav li');
+    var bottom = $('.header .nav .bottom');
+    li.hover(function (){
+        var index = li.index(this);
+        bottom.css({left:(110 * index) + 'px'});
+    },function (){
+        var index = li.index($('.header .nav li.select'));
+        bottom.css({left:(110 * index) + 'px'});
+    });
+    var index = li.index($('.header .nav li.select'));
+    bottom.css({left:(110 * index) + 'px'});
+
+    //
+    var box = $('.index-page .team .min_box');
+    var box_bg = $('.index-page .team .min_box_bg');
+    box.hover(function (){
+        var index = box.index(this);
+        box_bg.css({left:(296 * index) + 'px'});
+    },function (){
+        box_bg.css({left:(296 * 0) + 'px'});
+    });
+    // $('.join-slide-bar ul li:eq(0)').addClass('active')
+});
+//  弹出框 
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?fcc210568ddac91a2a02d72ff8226fc2";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+})();

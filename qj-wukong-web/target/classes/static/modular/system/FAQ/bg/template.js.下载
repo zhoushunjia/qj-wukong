@@ -1,0 +1,198 @@
+/**
+ * Created by Me on 2017/9/29.
+ */ 
+//  1. pc端  
+Vue.component ('my-footer',{
+    props: ['telephone','mail','address','number'],
+    template:
+        '<div class="footer">'+
+                '<div class="footer-main">'+
+                    '<img src="image/btm_bg.png" class="footer-bg">'+
+                    '<div class="footer-main-con">'+
+                        '<div class="con-wrapper">'+
+                            '<p class="phone">{{ telephone }}</p>'+
+                            '<p class="mailbox">{{ mail }}</p>'+
+                            '<p class="address">{{ address }}</p>'+
+                            '<section class="code-area">'+
+                                '<img src="image/erweima.jpg">'+
+                                '<p>微信公众号</p>'+
+                            '</section>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>'+
+                '<div class="footer-bottom">'+
+                    '<div class="bottom-item-wrap">'+
+                        '<div class="left">© 2016 ICEBARTECH.COM 版权所有.深圳市冰棍科技有限公司.粤ICP备16035793号-1</div>'+
+                        '<div class="right"><img src="image/b_r.jpg"></div>'+
+                    '</div>'+
+                '</div>'+
+           '</div>'
+});
+// 2. 手机端
+/*
+Vue.component ('my-nav',{
+    props: ['navTitle','navShow'],
+    template:
+        '<div class="nav">'+
+            '<div class="icon">'+
+                '<img src="../image/logo.png">'+
+            '</div>{{ navTitle }}'+
+            '<div class="nav-open">'+
+                '<img src="../image/nav_open.png">'+
+                '<ul class="nav-open-content" v-if="navShow">'+
+                '<li><a href="#">首页</a><div class="cret"></div></li>'+
+                '<li><a href="#">成功案例</a></li>'+
+                '<li><a href="#">解决方案</a></li>'+
+                '<li><a href="#">新闻资讯</a></li>'+
+                '<li><a href="#">核心服务</a></li>'+
+                '<li><a href="#">关于冰棍</a></li>'+
+                '<li><a href="#">加入我们</a></li>'+
+            '</ul>'+
+            '</div>'+
+        '</div>'
+});
+*/ 
+
+
+
+// // 底部
+// var Botcomponent = Vue.extend({
+//     props: ['telephone','mail','address'],
+//     template:
+//         '<div class="footer">'+
+//             '<p>{{ telephone }}</p>'+
+//             '<p>{{ mail }}</p>'+
+//             '<p>{{ address }}</p>'+
+//         '</div>'
+// })
+// Vue.component('footer',Botcomponent);
+
+
+
+var vm = new Vue({
+    el:'#container',
+    data:{
+        telephone:'',
+        mail:'',
+        address:'',
+        number:'',
+        // banner
+        picList:'',
+        // 新闻资讯
+        pageIndex:1,
+        infoList:[],
+        jobList:[],
+        index:[0,1,2,3,4,5,6,7],
+        // 
+        navShow:false,
+        navTitle:'首页',
+        navList:[
+            {url:'index.html',name:'首页'},
+            {url:'case.html',name:'成功案例'},
+            {url:'plan.html',name:'解决方案'},
+            {url:'news.html',name:'新闻资讯'},
+            {url:'service.html',name:'核心服务'},
+            {url:'about.html',name:'关于冰棍'},
+            {url:'join.html',name:'加入我们'},
+
+        ],
+        planList:[
+            {title:'移动电商APP',tip:'适用于020、B2B、B2C、C2C、分销和B2B、2C电子商务模式',text:'会员管理、商品展示、订单管理、加盟店管理、物流/计费、统计报表、运营管理、优惠券',isOpen:true},
+            {title:'餐饮类APP',tip:'没有好的解决方案？冰棍科技来帮忙，助您圆满完成送餐任务',text:'餐厅加盟、餐厅搜索、在线支付、在线点餐、精准定位、积分系统、会员管理、软硬件对接',isOpen:false},
+            {title:'金融类APP',tip:'安全合规的系统架助力快速搭建平台',text:'第三方支付、财务管理、资金池、众筹、借贷、基金交易、股票配资、风险评估',isOpen:false},
+            {title:'教育类APP',tip:'专业解决方案让您的app不同凡响，可根据需要灵活选择app功能模块',text:'线上课堂、在线答题、在线支付、模拟考试、学生定位、积分系统、会员 管理、打分系统',isOpen:false},
+            {title:'旅游类APP',tip:'拉近你与世界的距离，让旅行更简单',text:'酒店预订、景点管理、精准导航、机票预订、导游咨询、周边旅游、路线规划、旅游计划',isOpen:false},
+            {title:'家政类APP',tip:'线上线下无缝对接，客户家政轻松牵手',text:'家政预约、家政工展示、家政工管理在线支付、精准定位、服务评价、客服系统',isOpen:false},
+            {title:'地产类APP',tip:'一站搞定，随时随地，享尽先机',text:'经纪人管理、行家盘搜索、关联地产公司、房源发布、在线客服、预约看房、沙盘展示、楼盘收藏',isOpen:false},
+            {title:'社交类APP',tip:'支持所有IM场景，沟通无所顾忌',text:'互动游戏、好友管理、定位搜索、表请、语音聊天、视频直播、任务发布、活动圈子',isOpen:false},
+            {title:'行业门户类APP',tip:'教育、招聘、订车、会展、新媒体……',text:'互动游戏、好友管理、定位搜索、表请、语音聊天、视频直播、任务发布、活动圈子',isOpen:false}
+        ]
+    }, 
+    mounted:function () {
+        this.$nextTick(function () {
+            this.getContact();
+            this.getBanner();
+            this.getInfoList();
+            this.getJobList();
+
+        });
+    },
+    methods:{
+        getContact:function () {
+            var url = 'http://admin.icebartech.com/api/contact/findContact'
+            $.post(url, function(result) {
+                var data = JSON.parse(result);
+                if(data.status == 200){
+                    console.log(data.data.bussData[0]);
+                    vm.telephone = data.data.bussData[0].telephone?data.data.bussData[0].telephone:'--';
+                    vm.mail = data.data.bussData[0].mailBox?data.data.bussData[0].mailBox:'--';
+                    vm.address = data.data.bussData[0].address?data.data.bussData[0].address:'--';
+                    vm.number = data.data.bussData[0].number?data.data.bussData[0].number:'--';
+                }
+            })
+        },
+        getBanner:function () {
+            var url = 'http://admin.icebartech.com/api/advertis/findPCBanner'
+            $.post(url, function(result) {
+                var data = JSON.parse(result);
+                if(data.status == 200){
+                    vm.picList = data.data.bussData;
+                }
+            })
+        },
+        getJobList:function () {
+            var url = 'http://admin.icebartech.com/api/position/findPositionList'
+            $.post(url, function(result) {
+                var data = JSON.parse(result);
+                if(data.status == 200){
+                    console.log(data.data.bussData);
+                    vm.jobList = data.data.bussData;
+                }
+            })
+        },
+        getInfoList:function () {
+            var url = 'http://admin.icebartech.com/api/information/findInformationList';
+            var para = {pageIndex:vm.pageIndex, pageSize:6}
+            $.post(url,para, function(result) {
+                var data = JSON.parse(result);
+                if(data.status == 200){
+                    console.log(data.data.bussData);
+                    vm.infoList = data.data.bussData;
+                }
+            })
+        },
+        goHref:function (id) {
+            window.location.href = 'news1.html?id='+id;
+        },
+        linkBanner:function (url) {
+            window.location.href = url;
+            console.log(url);
+        },
+       switchTab:function (e) {
+           for(var i=0;i<5;i++){
+               $('.join-slide-bar ul li:eq('+i+')').removeClass('active');
+               $('.join-tab-item:eq('+i+')').hide();
+           }
+           $('.join-slide-bar ul li:eq('+e+')').addClass('active');
+           $('.join-tab-item:eq('+e+')').show()
+       },
+       navActive:function (index,url) {
+            for(var i=0;i<7;i++){
+                $('.nav-open-content li:eq('+i+') span').removeClass('active');
+            }
+            $('.nav-open-content li:eq('+index+') span').addClass('active');
+            setTimeout(function(){
+                window.location.href = url;
+            },100)
+            
+        },
+       openToggle:function(){
+            this.navShow = !this.navShow;
+       },
+       drop:function(index){
+           console.log(index);
+            let isOpen = this.planList[index].isOpen;
+            this.planList[index].isOpen = !isOpen;
+       }
+    }
+});

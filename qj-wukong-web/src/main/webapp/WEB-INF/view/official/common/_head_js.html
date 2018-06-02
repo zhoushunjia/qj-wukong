@@ -1,0 +1,48 @@
+<script type="text/javascript">
+
+  var SAAS_SHOP = 'http://saas.wqdian.com'; 
+  var SAAS_NEWS = 'http://saas.wqdian.com'; 
+
+  try {
+      var domain = "http://member.wqdian.com";
+      if(domain.indexOf("wqdian.com") != -1) {
+        document.domain = "wqdian.com";
+      }else if (domain.indexOf("wqdian.net") != -1) {
+        document.domain = "wqdian.net";
+      }
+  } catch (e) {
+      //console.log("跨域");
+  }
+  (function () {
+    var userAgent = navigator.userAgent,
+        isMobile  = !!userAgent.match(/AppleWebKit.*Mobile.*/);
+    if(isMobile) {
+        var viewport  = document.querySelector('meta[name="viewport"]'),
+            wWidth    = document.documentElement.clientWidth || window.innerWidth || document.body.clientWidth;
+            sca       = wWidth/320,
+            displayMode = 'pc';
+
+        if(displayMode == "phone") {
+          viewport.content='width=320,initial-scale='+sca+',minimum-scale='+sca+',maximum-scale='+sca+', user-scalable=no';
+        } else if(displayMode == "pc") {
+          var pcWidth = '' || 1600;
+          sca = wWidth / pcWidth;
+          viewport.content='width=320,initial-scale=1';
+          viewport.content='width=320,initial-scale='+sca+',minimum-scale='+sca;
+        }
+    }
+    //处理pc模版模版预览超链接新窗口打开问题 -- hjj
+    window.parent != window.self && $(document).find("a[target=_blank]").removeAttr("target");
+
+  })();
+</script>
+<script type="text/javascript" src="${ctxPath}/static/modular/system/home/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="${ctxPath}/static/modular/system/home/allocation.js"></script>
+<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdformDate.js"></script>
+<script type="text/javascript" src="${ctxPath}/static/modular/system/home/jweixin-1.0.0.js"></script>
+<script src="${ctxPath}/static/modular/system/home/qc.php" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript"src="${ctxPath}/static/modular/system/home/jquery.qrcode.min.js"></script>
+
+
+<script type="text/javascript"src="${ctxPath}/static/js/plugins/jquery.validation/jquery.validation.js"></script>
+<script type="text/javascript"src="${ctxPath}/static/js/plugins/jquery.validation/messages_zh.js"></script>

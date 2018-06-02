@@ -1,0 +1,10 @@
+.validate-error{
+	color: #ea2664;	
+}
+em.validate-error{
+   	position: relative;
+    top: 42px;	
+}
+.contact-error em.validate-error{
+	 top: 51px;
+}

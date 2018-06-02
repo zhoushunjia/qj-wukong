@@ -1,0 +1,113 @@
+	<div class="wqdView wqdFooterView">
+		<div class="wqdAreaView"></div>
+	</div>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/bootstrap.min.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/jquery.qrcode.min.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdExtendNav.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/baseInit.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdHoverContainer.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/news.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdcarousel.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdContainer.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdAccordion.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdVideo.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdVideoBackground.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdMapInit.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/api"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdProgress.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdNumberprogress.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdAnimation.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdNavigate.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdattentionlink.js"></script>
+	<script src="${ctxPath}/static/modular/system/home/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdForm.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/videoEditInit.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdColorbox.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdPicture.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdIscroll.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdArticleDetails.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdArticleLists.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdArticleList.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/navTemplate1.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/commodityList.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/commodityDetail.js"></script>
+	<!-- 商品搜索结果页 PC -->
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/commoditySearchResult.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdWechatlogin.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/jquery.nanoscroller.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/editShopping.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/edit-curve.js"></script>
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdManageInfo.js"></script>
+	<!-- 新闻plugin 功能 -->
+	<script type="text/javascript" src="${ctxPath}/static/modular/system/home/wqdArtPlugin.js"></script>
+
+	<!--  -->
+	<script type="text/javascript">
+$(function(){
+	if ('' == 'false') {
+		$('.formDate.wqdControlFormEl6 input').date_input();
+	}
+})
+</script>
+	<div style="display: none"></div>
+
+
+	<div id="J_qr_code_share"
+		style="box-shadow: 1px 1px 39px 1px; padding-top: 35px; z-index: 999; position: fixed; margin-top: -130px; margin-left: -130px; text-align: center; background: rgb(255, 255, 255); border-radius: 8px; top: 385.5px; left: 1199.6px; display: none;">
+		<span style="position: absolute; top: 6px; left: 12px;">扫码查看</span><i
+			class=" fa fa-remove"
+			style="position: absolute; top: 10px; right: 26px; cursor: pointer"></i>
+		<canvas width="210" height="210"></canvas>
+	</div>
+	<script src="${ctxPath}/static/modular/system/home/qzopensl.js" charset="utf-8"> </script>
+	<script src="${ctxPath}/static/modular/system/home/loader.js" widget="IFRAME_SHARE_QQ"
+		charset="utf-8"></script>
+	<div
+		style="width: 240px; height: 270px; position: fixed; display: none; top: 385.5px; left: 50%; box-shadow: 1px 1px 21px 2px; z-index: 99; border-radius: 8px; margin-top: -135px; margin-left: -120px;"
+		class="follow_box">
+		<span class="follow_txt" style="float: left; margin: 10px 0 0 10px"></span><span
+			class="follow_close" style="float: right; margin: 10px 10px 0 0"><i
+			class="fa fa-remove" style="font-size: 22px; cursor: pointer"></i></span>
+		<p
+			style="width: 100%; height: 200px; margin-top: 39px; width: 90%; margin: 39px auto 0; background-size: 100% 100%;"></p>
+	</div>
+	<div id="cboxOverlay" style="display: none;"></div>
+	<div id="colorbox" class="" role="dialog" tabindex="-1"
+		style="display: none;">
+		<div id="cboxWrapper">
+			<div>
+				<div id="cboxTopLeft" style="float: left;"></div>
+				<div id="cboxTopCenter" style="float: left;"></div>
+				<div id="cboxTopRight" style="float: left;"></div>
+			</div>
+			<div style="clear: left;">
+				<div id="cboxMiddleLeft" style="float: left;"></div>
+				<div id="cboxContent" style="float: left;">
+					<div id="cboxTitle" style="float: left;"></div>
+					<div id="cboxCurrent" style="float: left;"></div>
+					<button type="button" id="cboxPrevious"></button>
+					<button type="button" id="cboxNext"></button>
+					<button id="cboxSlideshow"></button>
+					<div id="cboxLoadingOverlay" style="float: left;"></div>
+					<div id="cboxLoadingGraphic" style="float: left;"></div>
+				</div>
+				<div id="cboxMiddleRight" style="float: left;"></div>
+			</div>
+			<div style="clear: left;">
+				<div id="cboxBottomLeft" style="float: left;"></div>
+				<div id="cboxBottomCenter" style="float: left;"></div>
+				<div id="cboxBottomRight" style="float: left;"></div>
+			</div>
+		</div>
+		<div
+			style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+	</div>
+	<div class="mtucebg"
+		style="display: none; background-color: #000; position: fixed; top: 0; width: 100%; z-index: 999">
+		<div id="mWrapper" style="height: 771px">
+			<div id="mScrollerShow">
+				<ul style="white-space: nowrap"></ul>
+			</div>
+		</div>
+	</div>
+	<!-- <script src="${ctxPath}/static/modular/system/home/getscript"></script> -->

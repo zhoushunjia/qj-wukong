@@ -1,0 +1,99 @@
+/* 新闻列表 第一套样式 auth:lx */
+.wqdArtPluginLx_1 {padding:10px;background:#f9f9f9;color:#333;font-size:16px;font-family:"Microsoft YaHei";box-sizing:border-box;}
+.wqdArtPluginLx_1 .nav {position:relative}
+.wqdArtPluginLx_1 .nav .line {position:absolute;width:100%;height:1px;border-top:1px solid #eee;bottom:-1px;z-index:1}
+.wqdArtPluginLx_1 .cont-nav span {border-bottom:1px solid #ccc;}
+.wqdArtPluginLx_1 .nav span {display:inline-block;position: relative;z-index:2;font-size:18px;line-height:2;text-align:center;border-bottom:3px solid transparent;max-width:150px;overflow:hidden;text-overflow: ellipsis;white-space:nowrap}
+.wqdArtPluginLx_1 .nav span.on,
+.wqdArtPluginLx_1 .nav span:hover {border-bottom:3px solid #ff9900;font-weight:700;cursor:pointer;}
+.wqdArtPluginLx_1 .nav .cont-nav {white-space:nowrap}
+.wqdArtPluginLx_1 .nav .nav-more {display:none;position:absolute;top:37px;padding:9px 0;width:100%;background:#fff;box-shadow: 0 6px 6px 0 rgba(199, 199, 199, .7);border-radius:3px;z-index: 1;}
+
+.wqdArtPluginLx_1 .newsList {padding:0;width:100%;margin-top:0}
+/* // .wqdArtPluginLx_1 .newsList li {display:inline-block;width:100%;border-bottom:1px solid #eee;padding:6px 0; } */
+.wqdArtPluginLx_1 .newsList li {display:inline-block;width:100%;border-bottom:1px solid #eee;padding:6px 0;position: relative; }
+.wqdArtPluginLx_1 .newsList li .svg-box {display:inline-block;text-align:center;width:26px;height:25px;line-height:25px;position:absolute;top:50%;transform:translateY(-50%);-webkit-transform: translateY(-50%);}
+.wqdArtPluginLx_1 .newsList li .svg-box svg {margin-bottom:-3px}
+/* // .wqdArtPluginLx_1 .newsList li .svg-box {display:inline-block;margin-right:24px;width:3.6%;height:22px;line-height:1} */
+/* // .wqdArtPluginLx_1 .newsList li .view {float:right;margin-top:3px;} */
+.wqdArtPluginLx_1 .newsList li .view {text-align: right;position:absolute;top:50%;right:0;transform:translateY(-48%);-webkit-transform: translateY(-48%);max-width: 100px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.wqdArtPluginLx_1 .newsList li .view i {display:inline-block;margin-right:8px;width:20px;height:20px;}
+.wqdArtPluginLx_1 .newsList li .view i svg {margin-bottom:-4px;fill: #000;}
+.wqdArtPluginLx_1 .newsList li .newsTitle {display:inline-block;vertical-align: middle;width:75.5%;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;margin-left:50px;}
+
+
+
+/* 新闻列表 第二套样式 auth:lx */
+.wqdArtPluginLx_2 {padding:10px;background:#f9f9f9;color:#333;font-size:18px;font-family:"Microsoft YaHei"}
+.wqdArtPluginLx_2 .nav {position:relative}
+.wqdArtPluginLx_2 .nav .line {position:absolute;width:100%;height:1px;border-top:1px solid #eee;bottom:-1px;z-index:1}
+.wqdArtPluginLx_2 .cont-nav span {border-bottom:1px solid #ccc;}
+.wqdArtPluginLx_2 .nav span {display:inline-block;position: relative;z-index:2;font-size:18px;line-height:2;text-align:center;border-bottom:3px solid transparent;}
+.wqdArtPluginLx_2 .nav span.on,
+.wqdArtPluginLx_2 .nav span:hover {border-bottom:3px solid #ff9900;font-weight:700;cursor:pointer;}
+.wqdArtPluginLx_2 .nav .cont-nav {white-space:nowrap}
+.wqdArtPluginLx_2 .nav .nav-more {display:none;position:absolute;top:37px;padding:9px 0;width:100%;background:#fff;box-shadow: 0 6px 6px 0 rgba(199, 199, 199, .7);border-radius:3px;z-index: 1;}
+
+.wqdArtPluginLx_2 .newsList {line-height:1;padding:10px 19px}
+.wqdArtPluginLx_2 .newsList .list-cell {margin-top:20px;width: 100%;}
+.wqdArtPluginLx_2 .newsList .list-cell .title {white-space:nowrap; overflow:hidden; text-overflow:ellipsis;font-size:20px}
+.wqdArtPluginLx_2 .newsList .list-cell .imgGroup {width:102%;margin:20px 0;}
+.wqdArtPluginLx_2 .newsList .list-cell .imgGroup img {display:inline-block;width:33.3%;padding-right:2%}
+.wqdArtPluginLx_2 .newsList .list-cell .footer {height:24px;margin-bottom:20px;color:#666;font-size:14px;line-height:24px}
+.wqdArtPluginLx_2 .newsList .list-cell .fl {float:left;width:60%;height:27px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.wqdArtPluginLx_2 .newsList .list-cell .fl span {display:inline-block}
+.wqdArtPluginLx_2 .newsList .list-cell .fl .tag {color:#fff;background:#dcdcdc;text-align:center;padding:0 8px;border-radius:3px;margin-left: 14px;margin-top:2px;margin-bottom:2px;}
+/* .wqdArtPluginLx_2 .newsList .list-cell .fl .midSpan {margin:0 14px 0 28px} */
+.wqdArtPluginLx_2 .newsList .list-cell .fr {float:right;width:40%;text-align:right;}
+.wqdArtPluginLx_2 .newsList .list-cell .fr span {display:inline-block;margin-left:28px;}
+.wqdArtPluginLx_2 .newsList .list-cell .fr .fav {margin-left:0px;}
+.wqdArtPluginLx_2 .newsList .list-cell .fr span i {display:inline-block}
+.wqdArtPluginLx_2 .newsList .list-cell .fr .fav i {margin-right:7px;width:20px;height:20px;cursor:pointer}
+.wqdArtPluginLx_2 .newsList .list-cell .fr .view i {margin-right:7px;width:20px;height:20px;}
+.wqdArtPluginLx_2 .newsList .list-cell .fr .fav i svg,
+.wqdArtPluginLx_2 .newsList .list-cell .fr .view i svg {margin-bottom:-4px;fill: #000;}
+.wqdArtPluginLx_2 .newsList .list-cell .line {width:100%;height:0px;border-top:0px solid #eee;}
+.wqdArtPluginLx_2 .newsList .load-more {text-align:center;margin-top:30px;}
+.wqdArtPluginLx_2 .newsList .load-more p {display:inline-block;width:160px;height:47px;line-height:47px;background:#ff9900;color:#fff;font-size:16px;border-radius:47px;cursor:pointer;}
+
+ /* 无数据样式 */
+.wqdArtPluginLx_2 .newsList .list-cell.artPlugin-no-data .title {text-align:center;font-weight:900;font-size:18px;line-height:2;}
+.wqdArtPluginLx_1 .newsList .list-cell.artPlugin-no-data .newsTitle {text-align:center;font-weight:900;font-size:18px;line-height:2;width:85%}
+
+/* svg 样式 */
+.wqdArtPluginLx_1 svg,
+.wqdArtPluginLx_2 svg {stroke: none}
+/* a标签 样式 */
+.wqdArtPluginLx_1 a:link, 
+.wqdArtPluginLx_1 a:visited, 
+.wqdArtPluginLx_1 a:hover, 
+.wqdArtPluginLx_1 a:active, 
+.wqdArtPluginLx_1 a:focus,
+.wqdArtPluginLx_2 a:link,
+.wqdArtPluginLx_2 a:visited,
+.wqdArtPluginLx_2 a:hover,
+.wqdArtPluginLx_2 a:active,
+.wqdArtPluginLx_2 a:focus {color:inherit !important;}
+
+
+
+.wqdArtPluginLx_1.no-title .newsTitle,
+.wqdArtPluginLx_1.no-nav .nav,
+.wqdArtPluginLx_1.no-loadmore .load-more,
+.wqdArtPluginLx_1.no-view .view,
+.wqdArtPluginLx_2.no-title .title,
+.wqdArtPluginLx_2.no-nav .nav,
+.wqdArtPluginLx_2.no-view .view,
+.wqdArtPluginLx_2.no-tag .tag,
+.wqdArtPluginLx_2.no-time .show-time,
+.wqdArtPluginLx_2.no-goods .fav,
+.wqdArtPluginLx_2.no-loadmore .load-more {display: none!important}
+
+.wqdArtPluginLx_1.no-line .list-cell,
+.wqdArtPluginLx_2.no-line .list-cell {border-bottom:none!important}
+
+.wqdArtPluginLx_1.no-border,
+.wqdArtPluginLx_2.no-border {border:0!important}
+
+.wqdArtPluginLx_1.no-bg,
+.wqdArtPluginLx_2.no-bg {background:rgba(0,0,0,0) !important}
