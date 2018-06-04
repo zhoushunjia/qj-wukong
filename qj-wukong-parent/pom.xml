@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>../qj-wukong-admin</module>
+        <module>../qj-wukong-web</module>
         <module>../qj-wukong-core</module>
         <module>../qj-wukong-rest</module>
         <module>../qj-wukong-generator</module>

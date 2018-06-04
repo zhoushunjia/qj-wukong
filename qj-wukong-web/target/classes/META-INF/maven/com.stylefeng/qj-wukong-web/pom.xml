@@ -9,8 +9,8 @@
         <relativePath>../qj-wukong-parent/pom.xml</relativePath>
     </parent>
 
-    <artifactId>qj-wukong-web</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <artifactId>qj-wukong-web</artifactId>    
+    <version>1.0.0-SNAPSHOT</version> 
 
     <packaging>jar</packaging>
 <!--     <packaging>war</packaging> -->
