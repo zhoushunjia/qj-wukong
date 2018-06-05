@@ -154,11 +154,15 @@ public class ShiroConfig {
         hashMap.put("/kaptcha", "anon");
         
         hashMap.put("/official/**", "anon");//user
+        hashMap.put("/wx/**", "anon");//user
         hashMap.put("/", "user");//user
         hashMap.put("/official/**", "anon");//user
 //        hashMap.put("/admin", "anon");
         hashMap.put("/customer/add", "anon");//user
         hashMap.put("/**", "user");//user
+        
+        
+       
         
        
         

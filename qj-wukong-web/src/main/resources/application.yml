@@ -99,7 +99,7 @@ logging:
   level.root: info
   level.com.stylefeng: debug
   path: logs/
-  file: guns.log
+  file: qj-wukong.log
 
 ---
 
