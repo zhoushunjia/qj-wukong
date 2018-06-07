@@ -18,7 +18,9 @@ import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
 
 public class BaseController {
-
+	protected static Integer SUCCESS_CODE=200;
+	protected static Integer ERROR_CODE=700;
+	
     protected static String SUCCESS = "SUCCESS";
     protected static String ERROR = "ERROR";
 

@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: qj-wukong-generator
 Implementation-Version: 1.0.0-SNAPSHOT
-Built-By: zhou
+Built-By: Administrator
 Implementation-Vendor-Id: com.stylefeng
-Build-Jdk: 1.8.0_101
+Build-Jdk: 1.8.0_91
 Implementation-URL: http://projects.spring.io/spring-boot/qj-wukong-ge
  nerator/
 Created-By: Maven Integration for Eclipse

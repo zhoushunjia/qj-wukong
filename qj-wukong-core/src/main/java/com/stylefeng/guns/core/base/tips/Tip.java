@@ -8,22 +8,31 @@ package com.stylefeng.guns.core.base.tips;
  */
 public abstract class Tip {
 
-    protected int code;
-    protected String message;
+	protected int code;
+	protected String message;
+	protected Object result;
 
-    public int getCode() {
-        return code;
-    }
+	public Object getResult() {
+		return result;
+	}
 
-    public void setCode(int code) {
-        this.code = code;
-    }
+	public void setResult(Object result) {
+		this.result = result;
+	}
 
-    public String getMessage() {
-        return message;
-    }
+	public int getCode() {
+		return code;
+	}
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
+	public void setCode(int code) {
+		this.code = code;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
 }
