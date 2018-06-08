@@ -21,9 +21,9 @@ public class UserTest extends BaseJunit {
     @Resource
     UserMapper userMapper;
 
-    @Test
+/*    @Test
     public void userTest() throws Exception {
 
-    }
+    }*/
 
 }
