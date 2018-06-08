@@ -1,4 +1,4 @@
-package com.stylefeng.guns.system;
+/*package com.stylefeng.guns.system;
 
 import com.stylefeng.guns.base.BaseJunit;
 import com.stylefeng.guns.modular.system.dao.DictDao;
@@ -10,12 +10,12 @@ import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
-/**
+*//**
  * 字典服务测试
  *
  * @author fengshuonan
  * @date 2017-04-27 17:05
- */
+ *//*
 public class DictTest extends BaseJunit {
 
     @Resource
@@ -47,3 +47,4 @@ public class DictTest extends BaseJunit {
         Assert.assertTrue(list.size() > 0);
     }
 }
+*/
