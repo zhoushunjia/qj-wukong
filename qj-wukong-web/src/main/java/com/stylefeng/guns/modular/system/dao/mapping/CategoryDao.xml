@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.system.dao.CategoryDao">
+
+
+
+	<select id="queryAllGoods" resultType="map">
+		select category_id id,category_name name from wk_product_category
+		where
+		1=1
+		<if test="status != null and status != ''">
+			AND status = #{status}
+		</if>
+		order by sort
+	</select>
+	<select id="queryProducts" resultType="map">
+		select c.category_id,p.product_id productId,p.description
+		productdesc,p.product_name
+		name,p.status,p.data_status,f.data_status,f.file_path picUrl,pd.price
+		minPrice,pd.colour,pd.dimens
+		from
+		wk_product_category c
+		left join wk_product_info p
+		on c.category_id = p.category_id
+		left join wk_product_picture pic
+		on p.product_id = pic.product_id
+		left join
+		wk_upload_file f
+		on pic.file_uid = f.file_uid
+		left join
+		wk_product_detail_info pd
+		on p.product_id = pd.product_id
+		having 1=1
+		<if test="nameLike != null and nameLike != ''">
+			AND p.product_name like #{nameLike}
+		</if>
+		<if test="status != null and status != ''">
+			AND p.status = #{status}
+		</if>
+		<if test="categoryId != null and categoryId != ''">
+			AND c.category_id = #{categoryId}
+		</if>
+		<if test="enable != null and enable != ''">
+			AND p.data_status = #{enable}
+		</if>
+		<if test="isPush != null and isPush != ''">
+			AND f.is_push = #{isPush}
+		</if>
+		order by order_by
+	</select>
+
+
+</mapper>
