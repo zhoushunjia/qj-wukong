@@ -29,9 +29,9 @@ public class FlowableTest {
     @Before
     public void init() {
         ProcessEngineConfiguration cfg = new StandaloneProcessEngineConfiguration()
-                .setJdbcUrl("jdbc:mysql://127.0.0.1:3306/guns_flowable?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull")
-                .setJdbcUsername("root")
-                .setJdbcPassword("root")
+                .setJdbcUrl("jdbc:mysql://39.108.178.160:3306/qj_wukong_flowable?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull")
+                .setJdbcUsername("qj_wukong_root")
+                .setJdbcPassword("123")
                 .setJdbcDriver("com.mysql.jdbc.Driver")
                 .setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
 
@@ -150,9 +150,9 @@ public class FlowableTest {
 
     public static void main(String[] args) {
         ProcessEngineConfiguration cfg = new StandaloneProcessEngineConfiguration()
-                .setJdbcUrl("jdbc:mysql://127.0.0.1:3306/flowable?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull")
-                .setJdbcUsername("root")
-                .setJdbcPassword("root")
+                .setJdbcUrl("jdbc:mysql://39.108.178.160:3306/qj_wukong_flowable?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull")
+                .setJdbcUsername("qj_wukong_root")
+                .setJdbcPassword("123")
                 .setJdbcDriver("com.mysql.jdbc.Driver")
                 .setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
 

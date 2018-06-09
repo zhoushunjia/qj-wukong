@@ -42,8 +42,8 @@ spring:
     converters:
       preferred-json-mapper: fastjson
     multipart:
-      max-request-size: 100MB #最大请求大小
-      max-file-size: 100MB #最大文件大小
+      max-request-size: 200MB #最大请求大小
+      max-file-size: 200MB #最大文件大小
   devtools:
     restart:
       enabled: true #是否开启开发者工具（true/false）#热部署生效
@@ -76,30 +76,30 @@ mybatis-plus:
 spring:
   profiles: dev
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/qj_wukong?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
-    username: root
+    url: jdbc:mysql://39.108.178.160:3306/qj_wukong?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: qj_wukong_root
     password: 123
     db-name: qj_wukong
     filters: log4j,wall,mergeStat
 
-#flowable数据源和多数据源配置
+#flowable工作流-数据源和多数据源配置
 guns:
   flowable:
     datasource:
-      url: jdbc:mysql://127.0.0.1:3306/guns_flowable?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
-      username: root
+      url: jdbc:mysql://39.108.178.160:3306/qj_wukong_flowable?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+      username: qj_wukong_root
       password: 123
   muti-datasource:
     default-dataSource-name: dataSourceGuns #默认的数据源名称
-    url: jdbc:mysql://127.0.0.1:3306/guns_flowable?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
-    username: root
+    url: jdbc:mysql://39.108.178.160:3306/qj_wukong_flowable?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+    username: qj_wukong_root
     password: 123
 
 logging:
   level.root: info
   level.com.stylefeng: debug
   path: logs/
-  file: guns.log
+  file: qj-wukong.log
 
 ---
 
@@ -109,13 +109,13 @@ logging:
 spring:
   profiles: produce
   datasource:
-      url: jdbc:mysql://127.0.0.1:3306/guns?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
-      username: root
+      url: jdbc:mysql://47.106.166.78:3306/qj_wukong?autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+      username: qj_wukong_root
       password: 123
       filters: log4j,wall,mergeStat
 
 logging:
   level.root: warn
   path: logs/
-  file: guns.log
+  file: qj-wukong.log
 
